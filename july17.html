@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Art Corner Studio C++ Website by faiyafrower</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Art Corner Studio C++ Website</h1>
+          <h2>Summer 2016</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="index.html" id="view-on-github" class="button"><span>Home</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h3>
+<h2 id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>July 17 Information</h2>
+
+<p>Here's the <a href="https://www.wired.com/2016/07/clever-tool-shields-car-hacks-watching-internal-clocks/#slide-2">link</a> to the Arduino project UM Researchers used to try to identify and prevent remote takeover of cars. Next week we will look into looping structures and functions in C++. If you haven't heard of 'factorial' or 'prime numbers' I encourage you to look them up or ask your parents about them!</p>
+
+<p>A reminder in case someone forgets, to compile a .cpp file, first you have to open a terminal/PowerShell window and use the 'cd' command to navigate to the folder containing your file; you may find the command 'ls' helpful to list everything in the current location. Then, for example a file called test.cpp, you compile it with: <span style="font-weight:bold">g++ test.cpp -o test</span>. Finally, you can run it with .\test.exe.</p>
+
+<h3 id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>addcheck.cpp</h3>
+
+<p>This is the program we did not get to, it is kind of an addition game, but also shows the if, else if, else structure. Feel free to try to compile and play with it.
+<pre><code>#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int num1;
+  int num2;
+  int answer;
+  int guess;
+
+  cout << "Enter first number: ";
+  cin >> num1;
+  cout << "Enter second number: ";
+  cin >> num2;
+
+  answer = num1 + num2;
+
+  cout << "What is " << num1 << " + " << num2 << "?" << endl;
+  cin >> guess;
+
+  if (guess == answer) {
+    cout << "Correct!" << endl;
+  } else if (guess > answer) {
+    cout << "Too high!" << endl;
+  } else {
+    cout << "Too low!" << endl;
+  }
+
+  return 0;
+}</code></pre>
+</p>
+
+<h3 id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>demo.cpp</h3>
+<p>This is the demo program to demonstrate C++ code structure.
+<pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+int main() {
+  //These are variables
+  int myInt = 0;
+  double myDouble = 3.2;
+  char myChar = 'a';
+  string myString;
+
+  //These interact with the Terminal
+  cin >> myString;
+  cout << myInt << " " << myString << endl;
+
+  //This ends the program
+  return 0;
+}
+</pre></code>
+</p>
+
+
+
+
+
+
+<h3 id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>simpleguess.cpp</h3>
+
+<p>This is the completed code for the number guessing game we worked on in class.
+
+<pre><code>#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int min = 1;
+  int max = 100;
+  int answer = 37;
+  int guess = 0;
+
+  cout << "Guess a number between " << min << " and " << max << ":";
+  cin >> guess;
+
+  if (guess == answer) {
+    cout << "You win!" << endl;
+  } else {
+    cout << "You lose!" << endl;
+  }
+
+  return 0;
+}
+</code></pre>
+
+</p>
+
+        <footer>
+          If you have questions please email michael_shen(at)outlook.com
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
