@@ -45,6 +45,23 @@
 
 <p>For the compiler, please follow steps 1-5 <a href="http://www1.cmc.edu/pages/faculty/alee/g++/g++.html">here. </a>Many people struggle or make a mistake with step 4. Don't worry about it, we will go over this during the first lesson, but if you can complete it, please do!</p>
 
+<p><span style="font-weight:bold">Alternative instructions for the compiler if the above does not work for your computer.</span>
+<ul>
+  <li>Download and run <a href="https://sourceforge.net/projects/mingw/files/latest/download">mingw-get-setup.exe. </a> Accept all the defaults and advance through the installation. </li>
+  <li>When completed, a window titled "MinGW Installation Manager" should appear.</li>
+  <li>Locate the line "mingw32-gcc-g++" and right click it and select "Mark for Installation".</li>
+  <li>On the top left, go into the Installation menu and select "Apply Changes." At this point you should see it download files needed for g++. This may take a few minutes.</li>
+  <li>Once that's completed locate your Environment Variables. These can be accessed through Control Panel > System and Security > System > Advanced System Settings (on the left pane) > Environment Variables...</li>
+  <li>Find the variable in the top pane called 'Path,' if it exists. Usually 'TEMP' and 'TMP' exist, but 'Path' may not exist yet. Select it and press Edit if it exists, create a new variable called 'Path' if it doesn't exist yet.
+    <ul>
+      <li>If Editing, add a semicolon (;) to the existing content and add C:\MinGW\bin. No spaces between the existing path, the semicolon, or the new addition.</li>
+      <li>If New, makes sure the Variable name is 'Path' and the content will be C:\MinGW\bin</li>
+    </ul> 
+  </li>
+  <li>Open PowerShell (close and reopen PowerShell if it's already open) and try to use g++</li>
+</ul>
+</p>
+
 <h3>
 <a id="ios" class="anchor" href="#ios" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>iOS Instructions</h3>
 
