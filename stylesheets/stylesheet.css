@@ -105,9 +105,8 @@ header h2 {
 a.button {
   display: block;
   float: left;
-  width: 179px;
+  width: 90px;
   padding: 12px 8px 12px 8px;
-  margin-right: 14px;
   font-size: 15px;
   font-weight: bold;
   line-height: 25px;
@@ -147,13 +146,13 @@ a.button:hover {
 }
 
 a.button span {
-  display: block;
+  display: table;
   height: 23px;
-  padding-left: 50px;
+  margin: 0 auto;
 }
 
 #view-on-github {
-  margin-right: 0;
+  margin-right: 15px;
 }
 
 code, pre {
