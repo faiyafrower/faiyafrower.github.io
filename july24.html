@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Art Corner Studio C++ Website by faiyafrower</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Art Corner Studio C++ Website</h1>
+          <h2>Summer 2016</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="index.html" id="view-on-github" class="button"><span>Home</span></a>
+          <a href="july17.html" id="view-on-github" class="button"><span>July 17</span></a>
+          <a href="july24.html" id="view-on-github" class="button"><span>July 24</span></a>
+          <a href="wip.html" id="view-on-github" class="button"><span>July 31</span></a>
+          <a href="wip.html" id="view-on-github" class="button"><span>August 7</span></a>
+        </section>
+        <hr>
+
+        <section id="main_content">
+          <h3>
+<h2 id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>July 17 Information</h2>
+
+<p>In the last class we covered two types of loops in C++: for and while loops. We discussed how for loops are often used when you want to do something a certain number of times, whereas while loops are often done when you don't have a good idea of how many times something needs to be done. In fact, they are interchangeable, but one is often easier to use than the other.</p>
+
+<p><span style="font-weight:bold">HOMEWORK</span>: As we discussed in class, 2 is the first prime number, 3 is the second prime number, 5 is the third prime number, and so on. What are the 11th, 101st, and 10,0001st prime number? I will post two hints: the first Wednesday night and the second Friday night to help people if they get stuck.</p>
+
+<p>A reminder in case someone forgets, to compile a .cpp file, first you have to open a terminal/PowerShell window and use the 'cd' command to navigate to the folder containing your file; you may find the command 'ls' helpful to list everything in the current location. Then, for example a file called test.cpp, you compile it with: <span style="font-weight:bold">g++ test.cpp -o test</span>. Finally, you can run it with .\test.exe.</p>
+
+<h3 id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>addvguess.cpp</h3>
+
+<p>This is the continuation of the number guessing program from the first week, with the addition of a while loop the game will keep on running until you win!
+<pre><code>#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int answer = 24;
+  int guess = 0;
+
+  //Everthing in the loop will run again as long as 
+  //'guess' does not equal 'answer'
+  while (guess != answer) {
+    cout << "Guess a number between 1 and 100: ";
+    cin >> guess;
+
+    if (guess > answer) {
+      cout << "Too high!" << endl;
+    } else if (guess < answer) {
+      cout << "Too low!" << endl;
+    }
+  }
+  
+  cout << "You win!" << endl;
+
+  return 0;
+}</code></pre>
+</p>
+
+<h3 id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>factorial.cpp</h3>
+<p>This is the program we worked on to calculate the factorial. I've included the 64-bit version so that you guys can play around with it; if you remember in class ours was 32-bit and could only calculate up to 16! correctly. What can the 64-bit version calculate up to?
+<pre><code>#include &lt;iostream&gt;
+//Needed to use 64-bit integers, integers up to 2^64
+#include &lt;stdint.h&gt;
+
+using namespace std;
+
+int main() {
+  int number;
+  //A 64-bit integer, the commented line is a 32-bit integer. 
+  //Only use one or the other, not both answer variables.
+  uint64_t answer = 1;
+  //int answer = 1;
+
+  cout << "Enter a number and I'll tell you what number! is: " << endl;
+  cin >> number;
+
+  for (int i = number; i > 0; i--) {
+    answer *= i;
+  }
+
+  cout << answer << endl;
+
+  return 0;
+}
+</pre></code>
+</p>
+
+<h3 id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>prime.cpp</h3>
+
+<p>This is the completed code for the indicating which numbers are prime up to a limit that you enter. It uses a 'boolean,' a new type of data, like an integer or a double. A boolean only has two possible values: 'true' or 'false.' This should be a good starting point for the homework assignment.
+
+<pre><code>#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  bool isPrime;
+  int limit;
+
+  cout << "Find prime numbers up to: " << endl;
+  cin >> limit;
+
+  //Starting at 1, check all numbers up to the entered 
+  //'limit' to see if they are prime
+  for (int number = 1; number <= limit; number++) {
+    //Assume the number is prime
+    isPrime = true;
+
+    if (number < 2) {
+      isPrime = false;
+    } else {
+      for (int i = 2; i < number; i++) {
+        if (number%i == 0) {
+          //if number is divisible by the number 'i', 
+          //it is not prime, so set isPrime to false
+
+          isPrime = false;
+          break;
+        }
+      }
+    }
+
+    //Print out the message, depending on the isPrime variable
+    if (isPrime == true) {
+      cout << number << " is prime." << endl;
+    } else {
+      cout << number << " is not prime." << endl;
+    }
+  }
+
+  return 0;
+}</code></pre>
+</p>
+
+  <footer>
+    If you have questions please email michael_shen(at)outlook.com
+  </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
