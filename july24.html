@@ -147,6 +147,54 @@ int main() {
 }</code></pre>
 </p>
 
+<h2 id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Homework Hint #1</h2>
+
+<p>This is very similar to prime.cpp above, but there's a new variable: counter. The program will use counter to tell us how many primes have been found in addition to which numbers are prime. Counter is initially 0, but as the program loops searches through numbers starting from 1 up to the entered limit, it will add 1 to counter each time a prime number is found and tell you how many it found at the end. </p>
+
+<p>Now, technically, you can run this over and over and try to guess where the 10,001st prime number is, but that would be pretty boring and take a long time. Can you figure out how to let the program keep running until it finds 10,001 prime numbers instead of hitting a limit that you enter?
+
+<pre><code>#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  bool isPrime;
+  int limit;
+  //New variable to keep track of how many primes have been found
+  int counter = 0;
+
+  cout << "Find prime numbers up to: " << endl;
+  cin >> limit;
+
+  for (int number = 1; number <= limit; number++) {
+    isPrime = true;
+
+    if (number < 2) {
+      isPrime = false;
+    } else {
+      for (int i = 2; i < number; i++) {
+        if (number%i == 0) {
+          isPrime = false;
+          break;
+        }
+      }
+    }
+
+    if (isPrime == true) {
+      cout << number << " is prime!" << endl;
+      //Remember the shorter way to write this is
+      //counter += 1;
+      counter = counter + 1;
+    }
+  }
+
+  cout << "There are " << counter;
+  cout << " primes less than or equal to " << limit << endl;
+
+  return 0;
+}</code></pre>
+</p>
+
   <footer>
     If you have questions please email michael_shen(at)outlook.com
   </footer>
