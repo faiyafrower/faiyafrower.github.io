@@ -195,6 +195,41 @@ int main() {
 }</code></pre>
 </p>
 
+<h2 id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Homework Hint #2</h2>
+
+<p>This would be a solution to a similar problem to the homework. This program can tell you what the 11th, 101st, 100001st, or practically any 'nth' even number. Of course this problem is quite easy to do by hand also (the solution is always n*2), but I hope you can adapt this strategy to homework hint #1 to complete the homework. The idea is that instead of looping to an upper limit that you have to guess or go through a lot of trial and error (something for loops are better at), you keep looping until you find 'n' correct numbers (something while loops are better at). Hope that helps, we'll discuss the solution(s) on Sunday!
+
+<pre><code>#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  int limit;
+  int number = 0;
+  int counter = 0;
+
+  cout << "Find the nth even positive number (enter n): ";
+  cin >> limit;
+
+  //When we find an even number, counter goes up by 1
+  //No matter what, number goes up by 1 each time (starting at 1)
+  //Once counter = limit, the loop will stop
+  //Whatever number is will be the answer we're looking for
+
+  while (counter < limit) {
+    number += 1;
+
+    if ((number % 2) == 0) {
+      counter += 1;
+    } 
+  }
+
+  cout << "The " << limit << "th even number is: " << number << endl;
+
+  return 0;
+}</code></pre>
+</p>
+
   <footer>
     If you have questions please email michael_shen(at)outlook.com
   </footer>
