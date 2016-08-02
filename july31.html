@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Art Corner Studio C++ Website by faiyafrower</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Art Corner Studio C++ Website</h1>
+          <h2>Summer 2016</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="index.html" id="view-on-github" class="button"><span>Home</span></a>
+          <a href="july17.html" id="view-on-github" class="button"><span>July 17</span></a>
+          <a href="july24.html" id="view-on-github" class="button"><span>July 24</span></a>
+          <a href="july31.html" id="view-on-github" class="button"><span>July 31</span></a>
+          <a href="wip.html" id="view-on-github" class="button"><span>August 7</span></a>
+        </section>
+        <hr>
+
+        <section id="main_content">
+          <h3>
+<h2 id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>July 31 Information</h2>
+
+<p>In the last class we reviewed for and while loops in C++. The main idea was that while loops are easiest to use when you cannot effectively determine how many times you want to run a loop. On the other hand, for loops are easiest to use when you know exactly or can calculate how many times you want to run a loop. The main examples we covered were calculating the factorial of a number (for loop) and determining the 10,001st prime number (while loop).</p>
+
+<p>We then started to cover how to write and use functions in C++ and how to transform already written code into a function. Specifically, a function to check divisibility, a function to compute the factorial, and a function to determine if a number is or is not prime. The key concepts are that a function returns a value for use in the main program and that they exist outside of the main function.</p>
+
+<p>Finally, we began working with the <a href="https://www.arduino.cc/">Arduino</a> we all purchased. We went over how the Arduino is a microcontroller and you can think of it like a very basic computer without a keyboard, mouse, or monitor and worked on a simple traffic light simulation with LEDs.</p>
+
+<p><span style="font-weight:bold">HOMEWORK</span>: Finish the function <span style="font-weight:italic">bool isPrimeFunction(int number)</span> if you didn't finish it in class. Remember you don't have to write this from scratch! You already have a program that can check if a number is prime. If you lost it check on the page for July 24 and you can get it there as well.</p>
+
+<p>A reminder in case someone forgets, to compile a .cpp file, first you have to open a terminal/PowerShell window and use the 'cd' command to navigate to the folder containing your file; you may find the command 'ls' helpful to list everything in the current location. Then, for example a file called test.cpp, you compile it with: <span style="font-weight:bold">g++ test.cpp -o test</span>. Finally, you can run it with .\test.exe.</p>
+
+<h3 id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>functions.cpp</h3>
+
+<p>This is the framework for the functions we finished in class 
+<pre><code>#include &lt;iostream&gt;
+
+using namespace std;
+
+bool isDivisible(int number, int divisor);
+int factorial(int number);
+bool isPrime(int number);
+
+int main() {
+  int i;
+
+  //Should print 0, for false
+  cout << isDivisible(5, 2) << endl;
+
+  cout << "Enter a number" << endl;
+  cin >> i;
+
+  //Should print i!
+  cout << factorial(i) << endl;
+
+  //Prints prime/not prime
+  if (isPrimeFunction(i) == true) {
+    cout << i << " is prime!" << endl;
+  } else {
+    cout << i << " is not prime!" << endl;
+  }
+
+  return 0;
+}
+
+bool isDivisible(int number, int divisor) {
+  if (number % divisor == 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+int factorial(int number) {
+  int answer = 1;
+
+  for (int i = number; i > 0; i--) {
+    answer *= i;
+  }
+
+  return answer;
+}
+
+bool isPrimeFunction(int number) {
+  //Fill in
+}</code></pre>
+</p>
+
+
+
+  <footer>
+    If you have questions please email michael_shen(at)outlook.com
+  </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
