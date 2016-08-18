@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Art Corner Studio C++ Website by faiyafrower</title>
+</head>
+<body>
+    <div id="container">
+        <div class="inner">
+            <header>
+                <h1>Art Corner Studio C++ Website</h1>
+                <h2>Summer 2016</h2>
+            </header>
+            <section id="downloads" class="clearfix">
+                <a href="index.html" id="view-on-github" class="button"><span>Home</span></a>
+                <a href="july17.html" id="view-on-github" class="button"><span>July 17</span></a>
+                <a href="july24.html" id="view-on-github" class="button"><span>July 24</span></a>
+                <a href="july31.html" id="view-on-github" class="button"><span>July 31</span></a>
+                <a href="arduino.html" id="view-on-github" class="button"><span>Arduino</span></a>
+            </section>
+            <hr>
+            <section id="main_content">
+                <h3>
+                    <h2 id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Arduino Information</h2>
+                    
+                    <p>The Arduino is a microcontroller that is frequently used in industry and research as a prototyping tool that allows people to test their code before developing a standalone product. 
+                    In this course, we covered basic C++ concepts, which translate very well into programming the Arduino. There are many provided examples and libraries written, which makes the Arduino a
+                    good starting point for programming embedded systems.</p>
+
+                    <p>We began with the Arduino's blink example program, which controls then on-board LED using pin 13. You can also find it through File > Examples > 01.Basics > Blink</p>
+
+<pre><code>// the setup function runs once when you press reset or power the board
+void setup() {
+    // initialize digital pin 13 as an output.
+    pinMode(13, OUTPUT);
+}
+// the loop function runs over and over again forever
+void loop() {
+    digitalWrite(13, HIGH);   // turn the LED on
+    delay(1000);              // wait for a second
+    digitalWrite(13, LOW);    // turn the LED off
+    delay(1000);              // wait for a second
+}</code></pre>        
+                     
+            <p>Next, we split into two groups: one group worked with a <a href="https://github.com/michiganhackers/introArduino">4x4 LED grid</a> and the other worked with an 
+            <a href="http://playground.arduino.cc/Code/NewPing">HC SR04 ultrasonic distance sensor</a>. I have linked the libraries if you need them again. The 4x4 LED grid is custom built and not for sale anywhere,
+            although they can be <a href="http://www.appelsiini.net/2011/how-does-led-matrix-work">built individually</a> with more electrical circuit knowledge and supervision. The HC SR04 is easily found through Amazon or eBay, often selling for around $1 each.</p>
+            
+            <h3 id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>In-Class Projects</h3>
+                                
+            <p>I'm sure all students realized the usefullness of libraries and the functions they provided with their project, even though their usefulness was difficult to appreciate in C++.
+            The students that worked on an animated design on the LED grid additionally gained insight into hexadecimal, how LED matrix circuits are designed, and elementary bit operations.
+            The students that worked on a backup collision sensor that you may find on many newer cars gained insight into sonar, hands-on circuit prototyping, and binary numbers. At the end, both groups
+            explained things they learned to the other to share concepts.</p>
+
+            <p>Finally, some students returned for an extra Arduino class. We worked towards creating additional functions for the LED grid and created a basic security system using the HC SR04 ultrasonic distance sensor.
+            Furthermore, we talked about other Arduinos, such as the LightBlue Bean and the Arduino Mini, which provide certain niche advantages. For example, the Bean is wireless and battery-powered, making it
+            and excellent portable solution, but the battery must be managed. On the other hand, the Arduino Mini is smaller, allowing for less-intrusive designs, but lacks a USB header, making it difficult to upload a program.</p>
+            
+            <h3 id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Arduino Resources</h3>
+
+            <p>Future projects students can work on with the Arduino often require some intial thought. For example, you might purchase a couple buttons and LEDs and create a turn signalling system for your bike, or if you purchase the 
+            HC SR04 ultrasonic sensor or motion sensor and a speaker, you could create a security system with an alarm. Of course, your first attempts will have issues, maybe they fall apart easily or do not work as well as you
+            would hope, but that's how new products get made! Think of an idea first, then look into buying the parts you need. For more guided instructions with the Arduino, I have heard good things about 
+            <a href="https://www.coursera.org/learn/arduino-platform">this course</a> online. </p>    
+
+            <h3 id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Programming Resources</h3>
+            
+            <p>For learning more about C++, the best way I've found is to
+            try to solve problems and learn through them. A site I really enjoy is <a href="https://projecteuler.net/archives">Project Euler</a>. It's a collection of math problems meant to be solved through programming (you may recognize the 7th problem) that
+            can be solved in any programming language. If you want a change of pace, you may try programming in Python. Try to figure out what you've done so far in Python, if/else, for/while loops, finding prime numbers, etc. Then I would point
+            you towards Project Euler after that. For other programming applications, such as Android/iOS apps or web-based applications, and aren't sure where to start feel free to ask me if you would like to get started in that department. They require 
+            some setup instructions, just like we had to do for C++ in this class.</p>
+                    
+            <h3 id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Thank You!</h3>
+            
+            <p>Last of all, thank you for having interest in the class. I hope I could keep it interesting for the students and I never would have been able to do this without all of your support.</p>
+                        
+            <footer>
+                If you have questions please email michael_shen(at)outlook.com
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
